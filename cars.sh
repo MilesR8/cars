@@ -4,9 +4,9 @@
 echo "Would you like to add a car (1) list of cars (2) or to quit (3)"
 echo "Please make a selection"
 read -r CHOICE
-while [ $CHOICE -ne 3 ]
+while [ "$CHOICE" -ne 3 ]
 do
-  if [ $CHOICE -eq 1 ]
+  if [ "$CHOICE" -eq 1 ]
   then
   echo "What year is it?"
   read -r YEAR
@@ -16,13 +16,13 @@ do
   read -r MODEL
   echo $'\n'"$YEAR:$MAKE:$MODEL" >> My_old_cars
 
-  elif [ $CHOICE -eq 2 ]
+  elif [ "$CHOICE" -eq 2 ]
   then
   sort -n My_old_cars
   echo ""
   
   else
-     echo $CHOICE "is not a valid selection"
+     echo "$CHOICE is not a valid selection"
   fi
   echo "Please make another selection. (1, 2, or  3)"
   read -r CHOICE
